@@ -10,14 +10,15 @@ n_qbits = 8
 n_bits = 8 
 
 # create the quantum circuit
-circuit = QuantumCircuit(n_qbits, n_bits)
+output_circuit = QuantumCircuit(n_qbits, n_bits)
 
 # loop through and measure each qbit into the classical bits
 for i in range(8): 
     # NOTE: measure(qbit, outbit) measures result of qbit into outbit, can use ints since these are indexable in our circuit
-    circuit.measure(i, i)
+    output_circuit.measure(i, i)
 
-print(circuit.draw())
+print(output_circuit.draw())
+
 
 
 # execute circuit and save the observed results
